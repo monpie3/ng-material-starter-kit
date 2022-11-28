@@ -9,6 +9,7 @@ import {CategoryMenuComponent} from './components/category-menu/category-menu.co
 import {ProductTableComponent} from './components/product-table/product-table.component';
 import {ProductFormComponent} from './components/product-form/product-form.component';
 import {EmployeeFormComponent} from './components/employee-form/employee-form.component';
+import {LoginFormComponent} from './components/login-form/login-form.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -22,8 +23,9 @@ import {CategoryMenuComponentModule} from './components/category-menu/category-m
 import {ProductTableComponentModule} from './components/product-table/product-table.component-module';
 import {ProductFormComponentModule} from './components/product-form/product-form.component-module';
 import {EmployeeFormComponentModule} from './components/employee-form/employee-form.component-module';
-import {EmployeesServiceModule} from "./services/employees.service-module";
-
+import {EmployeesServiceModule} from './services/employees.service-module';
+import {LoginFormComponentModule} from './components/login-form/login-form.component-module';
+import {LoginsServiceModule} from './services/logins.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot(
@@ -39,14 +41,15 @@ import {EmployeesServiceModule} from "./services/employees.service-module";
     }, {path: 'product-search', component: ProductTableComponent}, {
       path: 'create-product',
       component: ProductFormComponent
-    }, {path: 'create-employee', component: EmployeeFormComponent}]
+    }, {path: 'create-employee', component: EmployeeFormComponent}, {path: 'login', component: LoginFormComponent}]
   ), ProductListComponentModule, ProductsServiceModule,
     CategoryListComponentModule, CategoriesServiceModule,
     CryptoListComponentModule, CryptosServiceModule,
     PublicHolidayListComponentModule, PublicHolidaysServiceModule,
     CategoryCheckboxComponentModule, CategoryMenuComponentModule,
     ProductTableComponentModule, ProductFormComponentModule,
-    EmployeeFormComponentModule, EmployeesServiceModule],
+    EmployeeFormComponentModule, EmployeesServiceModule,
+    LoginFormComponentModule, LoginsServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
