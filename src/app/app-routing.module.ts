@@ -8,6 +8,7 @@ import {CategoryCheckboxComponent} from './components/category-checkbox/category
 import {CategoryMenuComponent} from './components/category-menu/category-menu.component';
 import {ProductTableComponent} from './components/product-table/product-table.component';
 import {ProductFormComponent} from './components/product-form/product-form.component';
+import {EmployeeFormComponent} from './components/employee-form/employee-form.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -20,6 +21,9 @@ import {CategoryCheckboxComponentModule} from './components/category-checkbox/ca
 import {CategoryMenuComponentModule} from './components/category-menu/category-menu.component-module';
 import {ProductTableComponentModule} from './components/product-table/product-table.component-module';
 import {ProductFormComponentModule} from './components/product-form/product-form.component-module';
+import {EmployeeFormComponentModule} from './components/employee-form/employee-form.component-module';
+import {EmployeesServiceModule} from "./services/employees.service-module";
+
 
 @NgModule({
   imports: [RouterModule.forRoot(
@@ -35,13 +39,14 @@ import {ProductFormComponentModule} from './components/product-form/product-form
     }, {path: 'product-search', component: ProductTableComponent}, {
       path: 'create-product',
       component: ProductFormComponent
-    }]
+    }, {path: 'create-employee', component: EmployeeFormComponent}]
   ), ProductListComponentModule, ProductsServiceModule,
     CategoryListComponentModule, CategoriesServiceModule,
     CryptoListComponentModule, CryptosServiceModule,
     PublicHolidayListComponentModule, PublicHolidaysServiceModule,
     CategoryCheckboxComponentModule, CategoryMenuComponentModule,
-    ProductTableComponentModule, ProductFormComponentModule],
+    ProductTableComponentModule, ProductFormComponentModule,
+    EmployeeFormComponentModule, EmployeesServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
