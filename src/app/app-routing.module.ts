@@ -7,6 +7,7 @@ import {PublicHolidayListComponent} from './components/public-holiday-list/publi
 import {CategoryCheckboxComponent} from './components/category-checkbox/category-checkbox.component';
 import {CategoryMenuComponent} from './components/category-menu/category-menu.component';
 import {ProductTableComponent} from './components/product-table/product-table.component';
+import {ProductFormComponent} from './components/product-form/product-form.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -18,6 +19,7 @@ import {PublicHolidaysServiceModule} from './services/public-holidays.service-mo
 import {CategoryCheckboxComponentModule} from './components/category-checkbox/category-checkbox.component-module';
 import {CategoryMenuComponentModule} from './components/category-menu/category-menu.component-module';
 import {ProductTableComponentModule} from './components/product-table/product-table.component-module';
+import {ProductFormComponentModule} from './components/product-form/product-form.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot(
@@ -30,13 +32,16 @@ import {ProductTableComponentModule} from './components/product-table/product-ta
     }, {path: 'checkbox-categories', component: CategoryCheckboxComponent}, {
       path: 'categories-menu',
       component: CategoryMenuComponent
-    }, {path: 'product-search', component: ProductTableComponent}]
+    }, {path: 'product-search', component: ProductTableComponent}, {
+      path: 'create-product',
+      component: ProductFormComponent
+    }]
   ), ProductListComponentModule, ProductsServiceModule,
     CategoryListComponentModule, CategoriesServiceModule,
     CryptoListComponentModule, CryptosServiceModule,
     PublicHolidayListComponentModule, PublicHolidaysServiceModule,
     CategoryCheckboxComponentModule, CategoryMenuComponentModule,
-    ProductTableComponentModule],
+    ProductTableComponentModule, ProductFormComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
