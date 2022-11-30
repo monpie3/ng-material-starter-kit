@@ -1,6 +1,6 @@
 export interface Name {
-  readonly nameFirstname: string;
-  readonly nameLastname: string;
+  readonly firstname: string;
+  readonly lastname: string;
 }
 
 export interface Geolocation {
