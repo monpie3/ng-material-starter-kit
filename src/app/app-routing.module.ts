@@ -16,6 +16,7 @@ import { CatFactComponent } from './components/cat-fact/cat-fact.component';
 import { DogPictureComponent } from './components/dog-picture/dog-picture.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { CartDetailComponent } from './components/cart-detail/cart-detail.component';
+import { AgePredictorComponent } from './components/age-predictor/age-predictor.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductsServiceModule } from './services/products.service-module';
 import { CategoryListComponentModule } from './components/category-list/category-list.component-module';
@@ -42,11 +43,13 @@ import { DogPictureServiceModule } from './services/dog-picture.service-module';
 import { UserDetailComponentModule } from './components/user-detail/user-detail.component-module';
 import { CartDetailComponentModule } from './components/cart-detail/cart-detail.component-module';
 import { CartsServiceModule } from './services/carts.service-module';
+import { AgePredictorComponentModule } from './components/age-predictor/age-predictor.component-module';
+import { AgePredictorsServiceModule } from './services/age-predictors.service-module';
 
 @NgModule({
   imports: [RouterModule.forRoot(
-    [{ path: 'products', component: ProductListComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'crypto', component: CryptoListComponent }, { path: 'public-holiday', component: PublicHolidayListComponent }, { path: 'checkbox-categories', component: CategoryCheckboxComponent }, { path: 'categories-menu', component: CategoryMenuComponent }, { path: 'product-search', component: ProductTableComponent }, { path: 'create-product', component: ProductFormComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: 'login', component: LoginFormComponent }, { path: 'register', component: UserFormComponent }, { path: 'product/:id', component: ProductDetailComponent }, { path: 'cat-fact', component: CatFactComponent }, { path: 'dog-picture', component: DogPictureComponent }, { path: 'user/:id', component: UserDetailComponent }, { path: 'cart/:id', component: CartDetailComponent }]
-  ), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CategoryCheckboxComponentModule, CategoryMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginsServiceModule, UserFormComponentModule, UsersServiceModule, ProductDetailComponentModule, CatFactComponentModule, CatFactServiceModule, DogPictureComponentModule, DogPictureServiceModule, UserDetailComponentModule, CartDetailComponentModule, CartsServiceModule],
+    [{ path: 'products', component: ProductListComponent }, { path: 'categories', component: CategoryListComponent }, { path: 'crypto', component: CryptoListComponent }, { path: 'public-holiday', component: PublicHolidayListComponent }, { path: 'checkbox-categories', component: CategoryCheckboxComponent }, { path: 'categories-menu', component: CategoryMenuComponent }, { path: 'product-search', component: ProductTableComponent }, { path: 'create-product', component: ProductFormComponent }, { path: 'create-employee', component: EmployeeFormComponent }, { path: 'login', component: LoginFormComponent }, { path: 'register', component: UserFormComponent }, { path: 'product/:id', component: ProductDetailComponent }, { path: 'cat-fact', component: CatFactComponent }, { path: 'dog-picture', component: DogPictureComponent }, { path: 'user/:id', component: UserDetailComponent }, { path: 'cart/:id', component: CartDetailComponent }, { path: 'age/:name', component: AgePredictorComponent }]
+  ), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CategoryCheckboxComponentModule, CategoryMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginsServiceModule, UserFormComponentModule, UsersServiceModule, ProductDetailComponentModule, CatFactComponentModule, CatFactServiceModule, DogPictureComponentModule, DogPictureServiceModule, UserDetailComponentModule, CartDetailComponentModule, CartsServiceModule, AgePredictorComponentModule, AgePredictorsServiceModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
