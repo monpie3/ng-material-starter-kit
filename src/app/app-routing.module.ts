@@ -23,6 +23,7 @@ import {
     FilteredProductListSubjectComponent
 } from './components/filtered-product-list-subject/filtered-product-list-subject.component';
 import {AdvancedProductsListComponent} from './components/advanced-products-list/advanced-products-list.component';
+import {AdvancedDeleteProductComponent} from './components/advanced-delete-product/advanced-delete-product.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -61,6 +62,9 @@ import {
 import {
     AdvancedProductsListComponentModule
 } from './components/advanced-products-list/advanced-products-list.component-module';
+import {
+    AdvancedDeleteProductComponentModule
+} from './components/advanced-delete-product/advanced-delete-product.component-module';
 
 @NgModule({
     imports: [RouterModule.forRoot(
@@ -94,8 +98,11 @@ import {
         }, {path: 'sort-product', component: SortedProductListComponent}, {
             path: 'filtered-products-on-subject',
             component: FilteredProductListSubjectComponent
-        }, {path: 'advanced-product-list', component: AdvancedProductsListComponent}]
-    ), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CategoryCheckboxComponentModule, CategoryMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginsServiceModule, UserFormComponentModule, UsersServiceModule, ProductDetailComponentModule, CatFactComponentModule, CatFactServiceModule, DogPictureComponentModule, DogPictureServiceModule, UserDetailComponentModule, CartDetailComponentModule, CartsServiceModule, AgePredictorComponentModule, AgePredictorsServiceModule, FilteredProductListComponentModule, SortedProductListComponentModule, FilteredProductListSubjectComponentModule, AdvancedProductsListComponentModule],
+        }, {path: 'advanced-product-list', component: AdvancedProductsListComponent}, {
+            path: 'advanced-delete-product',
+            component: AdvancedDeleteProductComponent
+        }]
+    ), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CategoryCheckboxComponentModule, CategoryMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginsServiceModule, UserFormComponentModule, UsersServiceModule, ProductDetailComponentModule, CatFactComponentModule, CatFactServiceModule, DogPictureComponentModule, DogPictureServiceModule, UserDetailComponentModule, CartDetailComponentModule, CartsServiceModule, AgePredictorComponentModule, AgePredictorsServiceModule, FilteredProductListComponentModule, SortedProductListComponentModule, FilteredProductListSubjectComponentModule, AdvancedProductsListComponentModule, AdvancedDeleteProductComponentModule],
     exports: [RouterModule]
 })
 export class AppRoutingModule {
