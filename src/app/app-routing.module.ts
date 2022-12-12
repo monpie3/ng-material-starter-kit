@@ -22,6 +22,7 @@ import {SortedProductListComponent} from './components/sorted-product-list/sorte
 import {
     FilteredProductListSubjectComponent
 } from './components/filtered-product-list-subject/filtered-product-list-subject.component';
+import {AdvancedProductsListComponent} from './components/advanced-products-list/advanced-products-list.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -56,7 +57,10 @@ import {
 import {SortedProductListComponentModule} from './components/sorted-product-list/sorted-product-list.component-module';
 import {
     FilteredProductListSubjectComponentModule
-} from "./components/filtered-product-list-subject/filtered-product-list-subject.component-module";
+} from './components/filtered-product-list-subject/filtered-product-list-subject.component-module';
+import {
+    AdvancedProductsListComponentModule
+} from './components/advanced-products-list/advanced-products-list.component-module';
 
 @NgModule({
     imports: [RouterModule.forRoot(
@@ -90,8 +94,8 @@ import {
         }, {path: 'sort-product', component: SortedProductListComponent}, {
             path: 'filtered-products-on-subject',
             component: FilteredProductListSubjectComponent
-        }]
-    ), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CategoryCheckboxComponentModule, CategoryMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginsServiceModule, UserFormComponentModule, UsersServiceModule, ProductDetailComponentModule, CatFactComponentModule, CatFactServiceModule, DogPictureComponentModule, DogPictureServiceModule, UserDetailComponentModule, CartDetailComponentModule, CartsServiceModule, AgePredictorComponentModule, AgePredictorsServiceModule, FilteredProductListComponentModule, SortedProductListComponentModule, FilteredProductListSubjectComponentModule],
+        }, {path: 'advanced-product-list', component: AdvancedProductsListComponent}]
+    ), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, PublicHolidayListComponentModule, PublicHolidaysServiceModule, CategoryCheckboxComponentModule, CategoryMenuComponentModule, ProductTableComponentModule, ProductFormComponentModule, EmployeeFormComponentModule, EmployeesServiceModule, LoginFormComponentModule, LoginsServiceModule, UserFormComponentModule, UsersServiceModule, ProductDetailComponentModule, CatFactComponentModule, CatFactServiceModule, DogPictureComponentModule, DogPictureServiceModule, UserDetailComponentModule, CartDetailComponentModule, CartsServiceModule, AgePredictorComponentModule, AgePredictorsServiceModule, FilteredProductListComponentModule, SortedProductListComponentModule, FilteredProductListSubjectComponentModule, AdvancedProductsListComponentModule],
     exports: [RouterModule]
 })
 export class AppRoutingModule {

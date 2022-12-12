@@ -11,4 +11,8 @@ export class EmployeesService {
   create(employee: Omit<EmployeeModel, 'id' | 'profileImage'>): Observable<EmployeeModel> {
     return this._httpClient.post<EmployeeModel>("https://dummy.restapiexample.com/api/v1/create", employee);
   }
+
+  getAll(): Observable<EmployeeModel[]> {
+    return this._httpClient.get<EmployeeModel[]>("https://dummy.restapiexample.com/api/v1/employees");
+  }
 }
