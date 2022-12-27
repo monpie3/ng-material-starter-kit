@@ -18,7 +18,7 @@ export class ProductsService {
 
   }
 
-  getOne(id: string): Observable<ProductModel> {
+  getOne(id: number): Observable<ProductModel> {
     return this._httpClient.get<ProductModel>(`https://fakestoreapi.com/products/${id}`);
   }
 
